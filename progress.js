@@ -32,7 +32,7 @@ class Progress {
         }
     }
 
-    toggleAnimation = () => this.animateCheckbox.checked ? this.bar.classList.add('start') : this.bar.classList.remove('start')
+    toggleAnimation = () => this.animateCheckbox.checked ? this.bar.classList.add('start') : this.bar.classList.remove('start');
 
     toggleVisibility() {
         if (this.hideCheckbox.checked) {
@@ -53,7 +53,7 @@ class Progress {
             this.input.value = value;
             this.updateProgress();
         } else {
-            console.error('Invalid progress value');
+            console.error('Недопустимое числовое значение');
         }
     }
 
@@ -71,7 +71,12 @@ class Progress {
 const progress = new Progress('progress-block');
 
 /* API
-@ progress.setProgress(20) изменить заполнение круга;
-@ progress.setAnimation(true) включить/выключить анимацию вращения круга;
-@ progress.setVisibility(true) показать/скрыть круг;
+    * @param {number} value - Число от 0 до 100.
+    * progress.setProgress(value);
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    * @param {boolean} state - Включить/выключить анимацию вращения круга.
+    * progress.setAnimation(state);
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    * @param {boolean} visible - Показать/скрыть круг.
+    * progress.setVisibility(visible);
 */

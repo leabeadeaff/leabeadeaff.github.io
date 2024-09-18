@@ -41,15 +41,12 @@ body {
     height: 200px;
 }
 
-.circle-svg circle {
-    transition: stroke-dashoffset 0.35s;
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
-}
-
 .bar {
     stroke-dasharray: 345.575191895 345.575191895;
     stroke-dashoffset: 345.575191895;
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
 }
 
 .start {

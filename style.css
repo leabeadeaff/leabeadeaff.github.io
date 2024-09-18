@@ -129,31 +129,15 @@ body {
     outline: none;
     width: 45px;
     height: 28px;
-    background-color: #ffffff;
     border: 2px solid #eff3f6;
     border-radius: 30px;
     box-shadow: inset -17px 0 0 0 #eff3f6;
     transition-duration: 200ms;
 }
 
-.inputs input.apple-switch:after {
-    content: "";
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    width: 26px;
-    height: 26px;
-    background-color: transparent;
-    border-radius: 50%;
-}
-
 .inputs input.apple-switch:checked {
     border-color: #005bff;
     box-shadow: inset 18px 0 0 0 #005bff;
-}
-
-.inputs input.apple-switch:checked:after {
-    left: 20px;
 }
 
 .banana {

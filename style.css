@@ -1,9 +1,6 @@
 @font-face {
     font-family: 'Quicksand-Bold-Regular';
-    src:url('Quicksand-Bold-Regular.ttf.woff') format('woff'),
-    url('Quicksand-Bold-Regular.ttf.svg#Quicksand-Bold-Regular') format('svg'),
-    url('Quicksand-Bold-Regular.ttf.eot'),
-    url('Quicksand-Bold-Regular.ttf.eot?#iefix') format('embedded-opentype');   
+    src:url('Quicksand-Bold-Regular.ttf.woff') format('woff');  
 }
 
 
@@ -70,7 +67,7 @@ body {
     left: 0;
     right: 0;
     text-align: center;
-    /*background-image: url("file:///C:/Users/%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB/Desktop/leabeadeaff.github.io-main/img/column.png");*/
+    /*background-image: url("/img/column.png");*/
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -178,7 +175,7 @@ body {
         flex-direction: row;
         width: 568px;
         height: 320px;
-        /*background-image: url("file:///C:/Users/%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB/Desktop/leabeadeaff.github.io-main/img/row.png");*/
+        /*background-image: url("/img/row.png");*/
     }
     .circle-container {
         margin-left: 10px;

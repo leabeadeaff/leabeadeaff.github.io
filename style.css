@@ -137,7 +137,7 @@ body {
 
 .inputs input.apple-switch:checked {
     border-color: #005bff;
-    box-shadow: inset 18px 0 0 0 #005bff;
+    box-shadow: inset 17px 0 0 0 #005bff;
 }
 
 .banana {

@@ -3,7 +3,6 @@
     src:url('Quicksand-Bold-Regular.ttf.woff') format('woff');  
 }
 
-
 @keyframes rotate {
     0% {
         transform: rotate(-90deg);
@@ -27,16 +26,11 @@ body {
     left: 20px;
 }
 
-.circle-container {
-    width: 200px;
-    height: 200px;
+.circle-svg {
     display: flex;
     margin-top: 5px;
     align-self: center;
     justify-content: center;
-}
-
-.circle-svg {
     width: 200px;
     height: 200px;
 }
@@ -158,15 +152,18 @@ body {
         height: 320px;
         /*background-image: url("/img/row.png");*/
     }
-    .circle-container {
+
+    .circle-svg {
         margin-left: 10px;
         margin-top: -1.4px;
     }
+
     .inputs {
         justify-content: center;
         margin-top: 1px;
         margin-left: 2px;
     }
+
     .inputs div {
         margin: 0;
     }

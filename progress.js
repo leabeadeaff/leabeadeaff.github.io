@@ -32,13 +32,7 @@ class Progress {
         }
     }
 
-    toggleAnimation() {
-        if (this.animateCheckbox.checked) {
-            this.bar.classList.add('start');
-        } else {
-            this.bar.classList.remove('start');
-        }
-    }
+    toggleAnimation = () => this.animateCheckbox.checked ? this.bar.classList.add('start') : this.bar.classList.remove('start')
 
     toggleVisibility() {
         if (this.hideCheckbox.checked) {

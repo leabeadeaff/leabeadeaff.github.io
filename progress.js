@@ -49,7 +49,7 @@ class Progress {
             this.input.value = value;
             this.updateProgress();
         } else {
-            console.log('Недопустимое числовое значение');
+            console.log('Ожидалось значение от 0 до 100');
         }
     }
 

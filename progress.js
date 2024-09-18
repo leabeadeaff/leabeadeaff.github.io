@@ -16,21 +16,17 @@ class Progress {
         this.input.oninput = () => this.updateProgress();
         this.animateCheckbox.onchange = () => this.toggleAnimation();
         this.hideCheckbox.onchange = () => this.toggleVisibility();
-    }
+        this.input.addEventListener("keyup", () => {
+            this.input.value = this.input.value.replace(/^(?!([0-9]$|[1-9][0-9]$|100$)).*$/g, "");
+        })}
 
-    circumference() {
-        return this.radius * 2 * Math.PI;
-    }
+    circumference = () => this.radius * 2 * Math.PI;
 
     updateProgress() {
         if (this.reg.test(this.input.value)) {
             let offset = this.circumference() - (this.circumference() * this.input.value / 100);
             this.bar.style.strokeDashoffset = offset;
-            this.input.style.border = '1px solid black';
-        } else {
-            this.input.style.border = '1px solid red';
-        }
-    }
+    }}
 
     toggleAnimation = () => this.animateCheckbox.checked ? this.bar.classList.add('start') : this.bar.classList.remove('start');
 
@@ -58,13 +54,21 @@ class Progress {
     }
 
     setAnimation(state) {
-        this.animateCheckbox.checked = state;
-        this.toggleAnimation();
+        if (typeof state === 'boolean') {
+            this.animateCheckbox.checked = state;
+            this.toggleAnimation();
+        } else {
+            console.log('Ожидалось булевое значение')
+        }
     }
 
     setVisibility(visible) {
-        this.hideCheckbox.checked = !visible;
-        this.toggleVisibility();
+        if (typeof visible === 'boolean') {
+            this.hideCheckbox.checked = !visible;
+            this.toggleVisibility();
+        } else {
+            console.log('Ожидалось булевое значение')
+        }
     }
 }
 

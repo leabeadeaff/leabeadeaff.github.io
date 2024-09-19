@@ -26,7 +26,10 @@ class Progress {
         if (this.reg.test(this.input.value)) {
             let offset = this.circumference() - (this.circumference() * this.input.value / 100);
             this.bar.style.strokeDashoffset = offset;
-    }}
+        } else {
+            this.bar.style.strokeDashoffset = this.circumference();
+        }
+    }
 
     toggleAnimation = () => this.animateCheckbox.checked ? this.bar.classList.add('start') : this.bar.classList.remove('start');
 
